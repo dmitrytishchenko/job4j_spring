@@ -6,6 +6,16 @@ public class Accident {
     private String text;
     private String address;
 
+    public Accident(int id, String name, String text, String address) {
+        this.id = id;
+        this.name = name;
+        this.text = text;
+        this.address = address;
+    }
+
+    public Accident() {
+    }
+
     public int getId() {
         return id;
     }
