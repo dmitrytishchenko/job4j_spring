@@ -23,7 +23,6 @@
     <div class="row justify-content-center align-items-center">
         <h1 class=""><span class="badge badge-secondary">Происшествия</span></h1>
     </div>
-
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -34,20 +33,15 @@
         </tr>
         </thead>
         <tbody>
-        <% for (Accident accident : AccidentMem.InstOf().getAccidents()) {%>
-        <th scope="row"><%=accident.getId()%>
-        </th>
-        <td><%=accident.getName()%>
-        </td>
-        <td><%=accident.getText()%>
-        </td>
-        <td><%=accident.getAddress()%>
-        </td>
+        <c:forEach items="${accidents}" var="accident">
+            <th scope="row"><c:out value="${accident.id}"/></th>
+            <td><c:out value="${accident.name}"/></td>
+            <td><c:out value="${accident.text}"/></td>
+            <td><c:out value="${accident.address}"/></td>
+        </c:forEach>
         </tr>
-        <%}%>
         </tbody>
     </table>
 </div>
-
 </body>
 </html>
