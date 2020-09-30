@@ -1,6 +1,12 @@
 package ru.job4j.accident.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "accident")
 public class Accident {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String text;
@@ -14,6 +20,12 @@ public class Accident {
     }
 
     public Accident() {
+    }
+
+    public Accident(String name, String text, String address) {
+        this.name = name;
+        this.text = text;
+        this.address = address;
     }
 
     public int getId() {
