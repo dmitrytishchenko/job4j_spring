@@ -5,7 +5,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 import ru.job4j.accident.model.Accident;
 
-import javax.persistence.Query;
 import java.util.List;
 
 @Repository
