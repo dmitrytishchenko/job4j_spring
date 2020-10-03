@@ -20,6 +20,9 @@
 </head>
 <body>
 <div class="container">
+    <div class="alert alert-info">
+    Login as : ${user.username}
+</div>
     <div class="row justify-content-center align-items-center">
         <h1 class=""><span class="badge badge-secondary">Происшествия</span></h1>
     </div>
